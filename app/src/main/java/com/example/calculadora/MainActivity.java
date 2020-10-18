@@ -40,40 +40,40 @@ public class MainActivity extends AppCompatActivity {
         tvOperacion = (TextView) findViewById(R.id.tvOperacion);
     }
     public void Concatenar(View view){
-        String tvConcatenar=tvOperacion.getText().toString();
+        String Concatenar=tvOperacion.getText().toString();
         switch (view.getId()){
             case R.id.btn0:
-                tvOperacion.setText(tvConcatenar+"0");
+                tvOperacion.setText(Concatenar + "0");
                 break;
             case R.id.btn1:
-                tvOperacion.setText(tvConcatenar+"1");
+                tvOperacion.setText(Concatenar+"1");
                 break;
             case R.id.btn2:
-                tvOperacion.setText(tvConcatenar+"2");
+                tvOperacion.setText(Concatenar+"2");
                 break;
             case R.id.btn3:
-                tvOperacion.setText(tvConcatenar+"3");
+                tvOperacion.setText(Concatenar+"3");
                 break;
             case R.id.btn4:
-                tvOperacion.setText(tvConcatenar+"4");
+                tvOperacion.setText(Concatenar+"4");
                 break;
             case R.id.btn5:
-                tvOperacion.setText(tvConcatenar+"5");
+                tvOperacion.setText(Concatenar+"5");
                 break;
             case R.id.btn6:
-                tvOperacion.setText(tvConcatenar+"6");
+                tvOperacion.setText(Concatenar+"6");
                 break;
             case R.id.btn7:
-                tvOperacion.setText(tvConcatenar+"7");
+                tvOperacion.setText(Concatenar+"7");
                 break;
             case R.id.btn8:
-                tvOperacion.setText(tvConcatenar+"8");
+                tvOperacion.setText(Concatenar+"8");
                 break;
             case R.id.btn9:
-                tvOperacion.setText(tvConcatenar+"9");
+                tvOperacion.setText(Concatenar+"9");
                 break;
             case R.id.btnPunto:
-                tvOperacion.setText(tvConcatenar+".");
+                tvOperacion.setText(Concatenar+".");
                 break;
         }
 
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     public  void Limpiar(View view) {
         n1=0;
         n2=0;
-        tvOperacion.setText("");
+        tvOperacion.setText("0");
         resultado=0;
     }
     public  void CambiarSigno(View view){
@@ -144,7 +144,6 @@ public class MainActivity extends AppCompatActivity {
                 resultado=(n2*n1)/100;
                 tvOperacion.setText(String.valueOf(resultado));
                 break;
-
         }
 
     }
