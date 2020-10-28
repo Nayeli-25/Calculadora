@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tvOperacion;
     double n1, n2, resultado;
     String operador;
-    Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnPunto, btnSuma, btnResta, btnMult, btnDiv, btnIgual, btnLimpiar, btnPorcentaje, btnCambiar;
+    Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnPunto, btnSuma, btnResta, btnMult, btnDiv, btnIgual, btnLimpiar, btnPorcentaje, btnBorrar, btnCambiar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         btnLimpiar = (Button) findViewById(R.id.btnLimpiar);
         btnPorcentaje = (Button) findViewById(R.id.btnPorcentaje);
         btnCambiar = (Button) findViewById(R.id.btnCambiar);
+        btnBorrar = (Button) findViewById(R.id.btnBorrar);
         tvOperacion = (TextView) findViewById(R.id.tvOperacion);
     }
     public void Concatenar(View view){
@@ -83,6 +84,10 @@ public class MainActivity extends AppCompatActivity {
         n2=0;
         tvOperacion.setText("0");
         resultado=0;
+    }
+    public  void Borrar(View view) {
+        String cifra = tvOperacion.getText().toString();
+        cifra = cifra.substring(0, cifra.length() - 1);
     }
     public  void CambiarSigno(View view){
         n1=Double.parseDouble(tvOperacion.getText().toString());
